@@ -26,11 +26,12 @@ class TodoRepository {
   }
 
   Future<TodoData> insert(TodoData todo) async {
-    await db.insert(tableName, {
+    final result = await db.insert(tableName, {
       columnNote: todo.note,
       columnIsComplete: todo.isComplete ?? false ? 1 : 0,
       columnCreatedAt: todo.createdAt
     });
+    todo.id = result;
     return todo;
   }
 
