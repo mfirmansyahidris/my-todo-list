@@ -10,35 +10,19 @@ class Strings {
     get = Strings._();
   }
 
-  String appName = "PocketGue";
-  String pleaseWait = "pleaseWait".toLocale();
-  String cancel = "cancel".toLocale();
-  String yes = "yes".toLocale();
-  String save = "save".toLocale();
-  String no = "no".toLocale();
-  String close = "close".toLocale();
-  String dataEmpty = "dataEmpty".toLocale();
-
-
-  String animals = "animals".toLocale();
-  String saved = "saved".toLocale();
-  String somethingWrong = "somethingWrong".toLocale();
-  String abilities = "abilities".toLocale();
-  String baseExperience = "baseExperience".toLocale();
-  String forms = "forms".toLocale();
-  String gameIndices = "gameIndices".toLocale();
-  String moves = "moves".toLocale();
-  String name = "name".toLocale();
-  String species = "species".toLocale();
-  String stats = "stats".toLocale();
-  String types = "types".toLocale();
-  String catchAnimal = "catch".toLocale();
-  String catchNewAnimal = "catchNewAnimal".toLocale();
-  String deleteConfirm = "deleteConfirm".toLocale();
-  String delete = "delete".toLocale();
-  String congratulation = "congratulation".toLocale();
+  String appName = "My Todo List";
 
   String createdBy = "createdBy".toLocale();
   String creator = "creator".toLocale();
+
+  String todoList = "todoList".toLocale();
+  String addNewTodoTitle = "addNewTodoTitle".toLocale();
+  String addNewTodoHint = "addNewTodoHint".toLocale();
+  String add = "add".toLocale();
+  String deleteCompleteTask = "deleteCompleteTask".toLocale();
+  String deleteCompleteConfirm = "deleteCompleteConfirm".toLocale();
+  String yes = "yes".toLocale();
+  String cancel = "cancel".toLocale();
+  String todoEmpty = "todoEmpty".toLocale();
 
 }

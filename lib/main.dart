@@ -12,6 +12,9 @@ import 'core/core.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
+  // setup service locator
+  await serviceLocator();
+
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       statusBarColor: Colors.transparent,

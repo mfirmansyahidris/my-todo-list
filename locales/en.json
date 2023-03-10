@@ -1,4 +1,14 @@
 {
   "createdBy": "Created by",
-  "creator": "M. Firmansyah Idris"
+  "creator": "M. Firmansyah Idris",
+
+  "todoList": "Todo list",
+  "addNewTodoTitle": "Add a new todo item",
+  "addNewTodoHint": "Type your new todo",
+  "add": "Add",
+  "deleteCompleteTask": "Delete Complete Task",
+  "deleteCompleteConfirm": "Are you sure want to delete completed task?",
+  "yes": "Yes",
+  "cancel": "Cancel",
+  "todoEmpty": "Todo is empty"
 }

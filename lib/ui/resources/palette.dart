@@ -11,5 +11,6 @@ class Palette {
   static const Color white = Color(0xffffffff);
   static const Color text = Color(0xff000000);
   static const Color textAlt = Color(0xff3D3D3D);
+  static const Color textDisable = Color(0xffa2a2a2);
   static const Color background = Color(0xffeeeeee);
 }

@@ -16,7 +16,7 @@ class TodoData {
   TodoData.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     note = json['note'];
-    isComplete = json['is_complete'];
+    isComplete = json['is_complete'] == 1 ? true : false;
     createdAt = json['created_at'];
     completedAt = json['competed_at'];
   }

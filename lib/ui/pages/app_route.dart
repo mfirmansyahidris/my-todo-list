@@ -14,8 +14,6 @@ class AppRoute {
   //define page route
   static Map<String, WidgetBuilder> getRoutes({RouteSettings? settings}) => {
     splashPage: (_) => BlocProvider(create: (context) => SplashBloc(), child: const SplashView()),
-    todoPage: (_) {
-      return const TodoView();
-    },
+    todoPage: (_) => BlocProvider(create: (context) => TodoBloc(), child: const TodoView()),
   };
 }

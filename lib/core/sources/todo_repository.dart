@@ -1,7 +1,7 @@
 import 'package:mtodolist/core/core.dart';
 import 'package:sqflite/sqflite.dart';
 
-class SavedAnimalRepository {
+class TodoRepository {
   static const tableName = "todo";
   static const columnId = "id";
   static const columnNote = "note";
@@ -16,21 +16,22 @@ class SavedAnimalRepository {
         onCreate: (Database db, int version) async {
       await db.execute('''
       create table $tableName ( 
-        $columnId int primary key autoincrement, 
+        $columnId integer primary key autoincrement, 
         $columnNote text not null,
-        $columnIsComplete int(1) not null,
-        $columnCreatedAt date null,
-        $columnCompletedAt date null)
+        $columnIsComplete integer(1) not null,
+        $columnCreatedAt text null,
+        $columnCompletedAt text null)
       ''');
     });
   }
 
   Future<TodoData> insert(TodoData todo) async {
-    await db.insert(tableName, {
+    final result = await db.insert(tableName, {
       columnNote: todo.note,
       columnIsComplete: todo.isComplete ?? false ? 1 : 0,
       columnCreatedAt: todo.createdAt
     });
+    print(result);
     return todo;
   }
 
@@ -55,7 +56,7 @@ class SavedAnimalRepository {
     return todos;
   }
 
-  Future<int> deleteComplete(String url) async {
+  Future<int> deleteComplete() async {
     return await db.delete(tableName, where: '$columnIsComplete = 1');
   }
 
